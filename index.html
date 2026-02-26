@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Documentación de Docentes - Análisis Educativo</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.2em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+            margin-top: 10px;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        /* SECCIÓN DE FILTROS */
+        .filters-section {
+            background: #f8f9fb;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border: 1px solid #e0e6f6;
+        }
+
+        .filters-section h2 {
+            margin-bottom: 20px;
+            color: #667eea;
+            font-size: 1.3em;
+        }
+
+        .filters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .filter-group label {
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #555;
+            font-size: 0.95em;
+        }
+
+        .filter-group select {
+            padding: 12px 15px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 1em;
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-group select:hover {
+            border-color: #667eea;
+        }
+
+        .filter-group select:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .filter-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            font-size: 0.95em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-secondary {
+            background: #e9ecef;
+            color: #333;
+            border: 2px solid #ddd;
+        }
+
+        .btn-secondary:hover {
+            background: #e0e6f6;
+            border-color: #667eea;
+        }
+
+        /* SECCIÓN DE ESTADÍSTICAS */
+        .stats-section {
+            margin-bottom: 35px;
+        }
+
+        .stats-section h2 {
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 1.3em;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #f5f7fb 0%, #fff 100%);
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .stat-card.inicial {
+            border-left-color: #10b981;
+        }
+
+        .stat-card.primario {
+            border-left-color: #f59e0b;
+        }
+
+        .stat-card.secundario {
+            border-left-color: #ef4444;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            color: #666;
+            font-weight: 500;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .stat-value {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #333;
+            line-height: 1;
+        }
+
+        .stat-icon {
+            font-size: 2em;
+            margin-top: 10px;
+            opacity: 0.3;
+        }
+
+        /* SECCIÓN DE GRÁFICOS */
+        .charts-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin-bottom: 35px;
+        }
+
+        .chart-container {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid #e0e6f6;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .chart-container h3 {
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 1.1em;
+        }
+
+        .chart-wrapper {
+            position: relative;
+            height: 300px;
+        }
+
+        /* SECCIÓN DE TABLA */
+        .table-section {
+            margin-top: 35px;
+        }
+
+        .table-section h2 {
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 1.3em;
+        }
+
+        .table-search {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .table-search input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 0.95em;
+            transition: all 0.3s ease;
+        }
+
+        .table-search input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+            border: 1px solid #e0e6f6;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95em;
+        }
+
+        thead {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        th {
+            padding: 16px;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 2px solid #667eea;
+        }
+
+        td {
+            padding: 14px 16px;
+            border-bottom: 1px solid #e0e6f6;
+        }
+
+        tbody tr {
+            transition: background 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fb;
+        }
+
+        tbody tr:nth-child(even) {
+            background: #fafbfc;
+        }
+
+        .code-cell {
+            font-family: 'Courier New', monospace;
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .docentes-cell {
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .docentes-inicial {
+            color: #10b981;
+        }
+
+        .docentes-primario {
+            color: #f59e0b;
+        }
+
+        .docentes-secundario {
+            color: #ef4444;
+        }
+
+        /* MODAL PARA DETALLE DE CENTROS */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 0;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 900px;
+            max-height: 85vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            animation: slideIn 0.3s ease;
+        }
+
+        .modal-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px 30px;
+            border-bottom: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-header h2 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+
+        .close-btn {
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 2em;
+            cursor: pointer;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+
+        .close-btn:hover {
+            transform: rotate(90deg);
+        }
+
+        .modal-body {
+            padding: 30px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* LOADING STATE */
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #667eea;
+            font-size: 1.1em;
+        }
+
+        .spinner {
+            border: 4px solid #f3f4f6;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* ERROR STATE */
+        .error-message {
+            background: #fee;
+            color: #c33;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            border-left: 4px solid #f44;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.5em;
+            }
+
+            .filters-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .charts-section {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            table {
+                font-size: 0.85em;
+            }
+
+            th, td {
+                padding: 10px 8px;
+            }
+        }
+
+        .distrito-detalle {
+            background: #f8f9fb;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            border-left: 4px solid #667eea;
+        }
+
+        .distrito-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 10px 0;
+        }
+
+        .distrito-stat {
+            background: white;
+            padding: 12px;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .distrito-stat-label {
+            font-size: 0.85em;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .distrito-stat-value {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: #667eea;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 40px;
+            color: #999;
+        }
+
+        .empty-state-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 Sistema de Análisis de Docentes</h1>
+            <p>Información educativa por Regional, Distrito y Centro</p>
+        </div>
+
+        <div class="content" id="app">
+            <!-- SECCIÓN DE CARGA -->
+            <div class="loading" id="loadingState">
+                <div class="spinner"></div>
+                <p>Cargando datos...</p>
+            </div>
+
+            <!-- SECCIÓN PRINCIPAL (oculta mientras carga) -->
+            <div id="mainContent" style="display: none;">
+                <!-- FILTRO DE REORDENAMIENTO -->
+                <div class="filters-section" style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-left: 4px solid #f59e0b;">
+                    <h2 style="color: #d97706;">📊 Reordenamiento de Docentes</h2>
+                    <div class="filters-grid">
+                        <div class="filter-group">
+                            <label for="reordenRegionalFilter">Regional Educativa</label>
+                            <select id="reordenRegionalFilter">
+                                <option value="">-- Todas las Regionales --</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="reordenDistritoFilter">Distrito Educativo</label>
+                            <select id="reordenDistritoFilter">
+                                <option value="">-- Todos los Distritos --</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="reordenNivelFilter">Nivel Educativo</label>
+                            <select id="reordenNivelFilter" onchange="App.actualizarGraficoReordenamiento()">
+                                <option value="todos">Todos los Niveles</option>
+                                <option value="inicial">Nivel Inicial</option>
+                                <option value="primario">Nivel Primario</option>
+                                <option value="secundario">Nivel Secundario</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="filter-buttons">
+                        <button class="btn btn-primary" onclick="App.actualizarGraficoReordenamiento()" style="background: linear-gradient(135deg, #d97706 0%, #ca8a04 100%);">Actualizar Análisis</button>
+                    </div>
+
+                    <!-- Gráfico y Estadísticas de Reordenamiento -->
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
+                        <div class="chart-container" style="background: white; border: 2px solid #f59e0b;">
+                            <h3>Estado del Personal por Nivel</h3>
+                            <div class="chart-wrapper">
+                                <canvas id="chartReordenamiento"></canvas>
+                            </div>
+                        </div>
+                        <div class="stat-card" style="border-left: none; display: flex; flex-direction: column; justify-content: center; gap: 15px; background: white; border: 2px solid #f59e0b;">
+                            <div style="text-align: center; padding: 15px; background: #fee2e2; border-radius: 6px;">
+                                <div class="stat-label">Personal Faltante</div>
+                                <div class="stat-value" id="reordenFaltante" style="color: #ef4444;">0</div>
+                            </div>
+                            <div style="text-align: center; padding: 15px; background: #dcfce7; border-radius: 6px;">
+                                <div class="stat-label">Personal Excedente</div>
+                                <div class="stat-value" id="reordenExcedente" style="color: #10b981;">0</div>
+                            </div>
+                            <div style="text-align: center; padding: 15px; background: #dbeafe; border-radius: 6px;">
+                                <div class="stat-label">Personal Completo</div>
+                                <div class="stat-value" id="reordenCompleto" style="color: #3b82f6;">0</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Análisis de situación -->
+                    <div style="background: white; padding: 15px; border-radius: 6px; margin-top: 15px; border-left: 4px solid #f59e0b;">
+                        <p style="font-size: 0.95em; color: #666; line-height: 1.6;">
+                            <strong style="color: #d97706;">Interpretación:</strong><br>
+                            📉 <strong>Personal Faltante:</strong> Cantidad de docentes necesarios para completar la asignación en esta región/distrito.<br>
+                            📈 <strong>Personal Excedente:</strong> Cantidad de docentes sin asignación actual (disponibles para reubicación).<br>
+                            ✅ <strong>Personal Completo:</strong> Cantidad de docentes con asignación óptima.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FILTROS -->
+                <div class="filters-section">
+                    <h2>🔍 Filtros</h2>
+                    <div class="filters-grid">
+                        <div class="filter-group">
+                            <label for="regionalFilter">Regional Educativa</label>
+                            <select id="regionalFilter">
+                                <option value="">-- Todas las Regionales --</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="distritoFilter">Distrito Educativo</label>
+                            <select id="distritoFilter">
+                                <option value="">-- Todos los Distritos --</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="filter-buttons">
+                        <button class="btn btn-primary" onclick="App.aplicarFiltros()">Aplicar Filtros</button>
+                        <button class="btn btn-secondary" onclick="App.limpiarFiltros()">Limpiar Filtros</button>
+                    </div>
+                </div>
+
+                <!-- ESTADÍSTICAS GLOBALES -->
+                <div class="stats-section">
+                    <h2>📈 Estadísticas Generales</h2>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-label">Total de Docentes</div>
+                            <div class="stat-value" id="totalDocentes">0</div>
+                            <div class="stat-icon">👨‍🏫</div>
+                        </div>
+                        <div class="stat-card inicial">
+                            <div class="stat-label">Nivel Inicial</div>
+                            <div class="stat-value" id="docentesInicial">0</div>
+                            <div class="stat-icon">👶</div>
+                        </div>
+                        <div class="stat-card primario">
+                            <div class="stat-label">Nivel Primario</div>
+                            <div class="stat-value" id="docentesPrimario">0</div>
+                            <div class="stat-icon">📚</div>
+                        </div>
+                        <div class="stat-card secundario">
+                            <div class="stat-label">Nivel Secundario</div>
+                            <div class="stat-value" id="docentesSecundario">0</div>
+                            <div class="stat-icon">🎓</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-label">Total de Centros</div>
+                            <div class="stat-value" id="totalCentros">0</div>
+                            <div class="stat-icon">🏫</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-label">Total de Distritos</div>
+                            <div class="stat-value" id="totalDistritos">0</div>
+                            <div class="stat-icon">📍</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GRÁFICOS -->
+                <div class="charts-section">
+                    <div class="chart-container">
+                        <h3>Distribución de Docentes por Nivel</h3>
+                        <div class="chart-wrapper">
+                            <canvas id="chartNiveles"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <h3>Docentes por Regional (Top 10)</h3>
+                        <div class="chart-wrapper">
+                            <canvas id="chartRegionales"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TABLA DE CENTROS -->
+                <div class="table-section">
+                    <h2>📋 Centros Educativos</h2>
+                    <div class="table-search">
+                        <input type="text" id="searchCentros" placeholder="Buscar por código, nombre o regional..." onkeyup="App.filtrarTabla()">
+                    </div>
+                    <div class="table-wrapper">
+                        <table id="tableCentros">
+                            <thead>
+                                <tr>
+                                    <th>Código</th>
+                                    <th>Centro Educativo</th>
+                                    <th>Regional</th>
+                                    <th>Distrito</th>
+                                    <th style="text-align: center;">Docentes Inicial</th>
+                                    <th style="text-align: center;">Docentes Primario</th>
+                                    <th style="text-align: center;">Docentes Secundario</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tableCentrosBody">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL PARA DETALLE DE DISTRITO -->
+    <div id="modalDetalle" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Detalle del Distrito</h2>
+                <button class="close-btn" onclick="App.cerrarModal()">&times;</button>
+            </div>
+            <div class="modal-body" id="modalBody">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const App = {
+            datos: null,
+            datosOriginal: null,
+            datosReordenamiento: null,
+            filtros: {
+                regional: '',
+                distrito: ''
+            },
+            filtrosReordenamiento: {
+                regional: '',
+                distrito: '',
+                nivel: 'inicial'
+            },
+
+            // Inicializar la aplicación
+            init: async function() {
+                try {
+                    // Cargar ambos archivos JSON
+                    const response1 = await fetch('datos.json');
+                    if (!response1.ok) throw new Error('Error al cargar datos.json');
+                    this.datos = await response1.json();
+                    this.datosOriginal = JSON.parse(JSON.stringify(this.datos));
+                    
+                    const response2 = await fetch('datos_reordenamiento.json');
+                    if (!response2.ok) throw new Error('Error al cargar datos_reordenamiento.json');
+                    this.datosReordenamiento = await response2.json();
+                    
+                    this.poblarFiltros();
+                    this.poblarFiltrosReordenamiento();
+                    this.alimentarGraficos();
+                    this.actualizarEstadisticas();
+                    this.alimentarTabla();
+                    this.actualizarGraficoReordenamiento();
+                    
+                    document.getElementById('loadingState').style.display = 'none';
+                    document.getElementById('mainContent').style.display = 'block';
+                } catch (error) {
+                    console.error('Error:', error);
+                    document.getElementById('loadingState').innerHTML = `
+                        <div class="error-message">
+                            Error al cargar los datos: ${error.message}<br>
+                            Verifique que el archivo datos.json esté en el mismo directorio.
+                        </div>
+                    `;
+                }
+            },
+
+            // Poblar selectores de filtros
+            poblarFiltros: function() {
+                const regionales = this.datos.regionales.map(r => ({
+                    codigo: r.codigo,
+                    nombre: r.nombre
+                }));
+
+                const selectRegional = document.getElementById('regionalFilter');
+                regionales.forEach(r => {
+                    const option = document.createElement('option');
+                    option.value = r.codigo;
+                    option.textContent = r.nombre;
+                    selectRegional.appendChild(option);
+                });
+
+                selectRegional.addEventListener('change', () => this.actualizarDistritos());
+                this.actualizarDistritos();
+            },
+
+            // Actualizar distritos según regional seleccionada
+            actualizarDistritos: function() {
+                const regionalSeleccionada = document.getElementById('regionalFilter').value;
+                const selectDistrito = document.getElementById('distritoFilter');
+                
+                // Limpiar opciones, excepto la primera
+                while (selectDistrito.options.length > 1) {
+                    selectDistrito.remove(1);
+                }
+
+                if (!regionalSeleccionada) {
+                    // Mostrar todos los distritos
+                    const todosDistritos = [];
+                    this.datos.regionales.forEach(r => {
+                        r.distritos.forEach(d => {
+                            todosDistritos.push({
+                                codigo: d.codigo,
+                                nombre: d.nombre
+                            });
+                        });
+                    });
+                    
+                    todosDistritos.forEach(d => {
+                        const option = document.createElement('option');
+                        option.value = d.codigo;
+                        option.textContent = d.nombre;
+                        selectDistrito.appendChild(option);
+                    });
+                } else {
+                    // Filtrar distritos por regional
+                    const regional = this.datos.regionales.find(r => r.codigo === regionalSeleccionada);
+                    if (regional) {
+                        regional.distritos.forEach(d => {
+                            const option = document.createElement('option');
+                            option.value = d.codigo;
+                            option.textContent = d.nombre;
+                            selectDistrito.appendChild(option);
+                        });
+                    }
+                }
+            },
+
+            // Poblar filtros de Reordenamiento
+            poblarFiltrosReordenamiento: function() {
+                if (!this.datosReordenamiento) return;
+                
+                const regionales = this.datosReordenamiento.regionales.map(r => ({
+                    codigo: r.codigo,
+                    nombre: r.nombre
+                }));
+
+                const selectRegional = document.getElementById('reordenRegionalFilter');
+                regionales.forEach(r => {
+                    const option = document.createElement('option');
+                    option.value = r.codigo;
+                    option.textContent = r.nombre;
+                    selectRegional.appendChild(option);
+                });
+
+                selectRegional.addEventListener('change', () => this.actualizarDistritosReordenamiento());
+                this.actualizarDistritosReordenamiento();
+            },
+
+            // Actualizar distritos de Reordenamiento según regional seleccionada
+            actualizarDistritosReordenamiento: function() {
+                if (!this.datosReordenamiento) return;
+                
+                const regionalSeleccionada = document.getElementById('reordenRegionalFilter').value;
+                const selectDistrito = document.getElementById('reordenDistritoFilter');
+                
+                // Limpiar opciones, excepto la primera
+                while (selectDistrito.options.length > 1) {
+                    selectDistrito.remove(1);
+                }
+
+                if (!regionalSeleccionada) {
+                    // Mostrar todos los distritos
+                    const todosDistritos = [];
+                    this.datosReordenamiento.regionales.forEach(r => {
+                        r.distritos.forEach(d => {
+                            todosDistritos.push({
+                                codigo: d.codigo,
+                                nombre: d.nombre
+                            });
+                        });
+                    });
+                    
+                    todosDistritos.forEach(d => {
+                        const option = document.createElement('option');
+                        option.value = d.codigo;
+                        option.textContent = d.nombre;
+                        selectDistrito.appendChild(option);
+                    });
+                } else {
+                    // Filtrar distritos por regional
+                    const regional = this.datosReordenamiento.regionales.find(r => r.codigo === regionalSeleccionada);
+                    if (regional) {
+                        regional.distritos.forEach(d => {
+                            const option = document.createElement('option');
+                            option.value = d.codigo;
+                            option.textContent = d.nombre;
+                            selectDistrito.appendChild(option);
+                        });
+                    }
+                }
+            },
+
+            // Actualizar gráfico de Reordenamiento
+            actualizarGraficoReordenamiento: function() {
+                const regionalSeleccionada = document.getElementById('reordenRegionalFilter').value;
+                const distritoSeleccionado = document.getElementById('reordenDistritoFilter').value;
+                const nivelSeleccionado = document.getElementById('reordenNivelFilter').value;
+
+                let faltante = 0, excedente = 0, completo = 0;
+
+                if (!regionalSeleccionada && !distritoSeleccionado) {
+                    // Estadísticas globales
+                    const stats = this.datosReordenamiento.estadisticas;
+                    if (nivelSeleccionado === 'todos') {
+                        // Sumar todos los niveles
+                        faltante = Math.abs(stats['inicial']['faltante']) + Math.abs(stats['primario']['faltante']) + Math.abs(stats['secundario']['faltante']);
+                        excedente = stats['inicial']['excedente'] + stats['primario']['excedente'] + stats['secundario']['excedente'];
+                    } else {
+                        faltante = Math.abs(stats[nivelSeleccionado]['faltante']);
+                        excedente = stats[nivelSeleccionado]['excedente'];
+                    }
+                } else if (regionalSeleccionada && !distritoSeleccionado) {
+                    // Filtrar por regional
+                    const regional = this.datosReordenamiento.regionales.find(r => r.codigo === regionalSeleccionada);
+                    if (regional) {
+                        regional.distritos.forEach(d => {
+                            if (nivelSeleccionado === 'todos') {
+                                // Sumar todos los niveles
+                                faltante += Math.abs(d['inicial']['faltante']) + Math.abs(d['primario']['faltante']) + Math.abs(d['secundario']['faltante']);
+                                excedente += d['inicial']['excedente'] + d['primario']['excedente'] + d['secundario']['excedente'];
+                                completo += d['inicial']['completo'] + d['primario']['completo'] + d['secundario']['completo'];
+                            } else {
+                                faltante += Math.abs(d[nivelSeleccionado]['faltante']);
+                                excedente += d[nivelSeleccionado]['excedente'];
+                                completo += d[nivelSeleccionado]['completo'];
+                            }
+                        });
+                    }
+                } else if (regionalSeleccionada && distritoSeleccionado) {
+                    // Filtrar por regional y distrito
+                    const regional = this.datosReordenamiento.regionales.find(r => r.codigo === regionalSeleccionada);
+                    if (regional) {
+                        const distrito = regional.distritos.find(d => d.codigo === distritoSeleccionado);
+                        if (distrito) {
+                            if (nivelSeleccionado === 'todos') {
+                                // Sumar todos los niveles
+                                faltante = Math.abs(distrito['inicial']['faltante']) + Math.abs(distrito['primario']['faltante']) + Math.abs(distrito['secundario']['faltante']);
+                                excedente = distrito['inicial']['excedente'] + distrito['primario']['excedente'] + distrito['secundario']['excedente'];
+                                completo = distrito['inicial']['completo'] + distrito['primario']['completo'] + distrito['secundario']['completo'];
+                            } else {
+                                faltante = Math.abs(distrito[nivelSeleccionado]['faltante']);
+                                excedente = distrito[nivelSeleccionado]['excedente'];
+                                completo = distrito[nivelSeleccionado]['completo'];
+                            }
+                        }
+                    }
+                }
+
+                this.crearGraficoReordenamiento(faltante, excedente, completo);
+            },
+
+            // Crear gráfico de Reordenamiento
+            crearGraficoReordenamiento: function(faltante, excedente, completo) {
+                const ctx = document.getElementById('chartReordenamiento').getContext('2d');
+
+                if (window.chartReordenamiento && typeof window.chartReordenamiento.destroy === 'function') {
+                    try {
+                        window.chartReordenamiento.destroy();
+                    } catch(e) {
+                        console.warn('Error destroying chart:', e);
+                        window.chartReordenamiento = null;
+                    }
+                }
+
+                const total = faltante + excedente + completo;
+                const labels = [
+                    `Personal Faltante (${faltante})`,
+                    `Personal Excedente (${excedente})`,
+                    `Personal Completo (${completo})`
+                ];
+                const datos = [faltante, excedente, completo];
+                const colores = ['#ef4444', '#10b981', '#3b82f6'];
+                const coloresBorde = ['#dc2626', '#059669', '#1d4ed8'];
+
+                window.chartReordenamiento = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: labels,
+                        datasets: [{
+                            data: datos,
+                            backgroundColor: colores,
+                            borderColor: coloresBorde,
+                            borderWidth: 2,
+                            hoverOffset: 10
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                                labels: {
+                                    usePointStyle: true,
+                                    padding: 20,
+                                    font: { size: 12, weight: 'bold' }
+                                }
+                            }
+                        }
+                    }
+                });
+
+                // Actualizar estadísticas de Reordenamiento
+                this.actualizarEstadisticasReordenamiento(faltante, excedente, completo, total);
+            },
+
+            // Actualizar estadísticas de Reordenamiento
+            actualizarEstadisticasReordenamiento: function(faltante, excedente, completo, total) {
+                const faltantePercent = total > 0 ? ((faltante / total) * 100).toFixed(1) : 0;
+                const excedentePercent = total > 0 ? ((excedente / total) * 100).toFixed(1) : 0;
+                const completoPercent = total > 0 ? ((completo / total) * 100).toFixed(1) : 0;
+
+                document.getElementById('reordenFaltante').innerHTML = `${faltante} <small>(${faltantePercent}%)</small>`;
+                document.getElementById('reordenExcedente').innerHTML = `${excedente} <small>(${excedentePercent}%)</small>`;
+                document.getElementById('reordenCompleto').innerHTML = `${completo} <small>(${completoPercent}%)</small>`;
+            },
+
+            // Aplicar filtros
+            aplicarFiltros: function() {
+                this.filtros.regional = document.getElementById('regionalFilter').value;
+                this.filtros.distrito = document.getElementById('distritoFilter').value;
+
+                this.alimentarTabla();
+                this.actualizarEstadisticas();
+                this.alimentarGraficos();
+            },
+
+            // Limpiar filtros
+            limpiarFiltros: function() {
+                document.getElementById('regionalFilter').value = '';
+                document.getElementById('distritoFilter').value = '';
+                this.filtros.regional = '';
+                this.filtros.distrito = '';
+                this.actualizarDistritos();
+                this.alimentarTabla();
+                this.actualizarEstadisticas();
+                this.alimentarGraficos();
+            },
+
+            // Filtrar datos según los filtros aplicados
+            obtenerDatosFiltrados: function() {
+                let datosFiltrados = {
+                    regionales: [],
+                    estadisticas: { total_docentes_inicial: 0, total_docentes_primario: 0, total_docentes_secundario: 0, total_docentes: 0, total_centros: 0, total_distritos: 0 }
+                };
+
+                this.datos.regionales.forEach(regional => {
+                    if (!this.filtros.regional || regional.codigo === this.filtros.regional) {
+                        let datosRegional = { ...regional, distritos: [] };
+
+                        regional.distritos.forEach(distrito => {
+                            if (!this.filtros.distrito || distrito.codigo === this.filtros.distrito) {
+                                datosRegional.distritos.push(distrito);
+                                datosFiltrados.estadisticas.total_docentes_inicial += distrito.total_docentes_inicial;
+                                datosFiltrados.estadisticas.total_docentes_primario += distrito.total_docentes_primario;
+                                datosFiltrados.estadisticas.total_docentes_secundario += distrito.total_docentes_secundario;
+                                datosFiltrados.estadisticas.total_centros += distrito.centros.length;
+                            }
+                        });
+
+                        if (datosRegional.distritos.length > 0) {
+                            datosFiltrados.regionales.push(datosRegional);
+                        }
+                    }
+                });
+
+                if (!this.filtros.regional && !this.filtros.distrito) {
+                    datosFiltrados.estadisticas = this.datos.estadisticas;
+                    datosFiltrados.regionales = this.datos.regionales;
+                }
+
+                datosFiltrados.estadisticas.total_docentes = datosFiltrados.estadisticas.total_docentes_inicial + datosFiltrados.estadisticas.total_docentes_primario + datosFiltrados.estadisticas.total_docentes_secundario;
+                datosFiltrados.estadisticas.total_distritos = datosFiltrados.regionales.reduce((sum, r) => sum +r.distritos.length, 0);
+
+                return datosFiltrados;
+            },
+
+            // Actualizar estadísticas
+            actualizarEstadisticas: function() {
+                const datos = this.obtenerDatosFiltrados();
+                const stats = datos.estadisticas;
+
+                document.getElementById('totalDocentes').textContent = stats.total_docentes.toLocaleString();
+                document.getElementById('docentesInicial').textContent = stats.total_docentes_inicial.toLocaleString();
+                document.getElementById('docentesPrimario').textContent = stats.total_docentes_primario.toLocaleString();
+                document.getElementById('docentesSecundario').textContent = stats.total_docentes_secundario.toLocaleString();
+                document.getElementById('totalCentros').textContent = stats.total_centros.toLocaleString();
+                document.getElementById('totalDistritos').textContent = stats.total_distritos.toLocaleString();
+            },
+
+            // Alimentar tabla de centros
+            alimentarTabla: function() {
+                const tbody = document.getElementById('tableCentrosBody');
+                tbody.innerHTML = '';
+
+                const datos = this.obtenerDatosFiltrados();
+                let filas = 0;
+
+                datos.regionales.forEach(regional => {
+                    regional.distritos.forEach(distrito => {
+                        distrito.centros.forEach(centro => {
+                            const row = document.createElement('tr');
+                            row.innerHTML = `
+                                <td class="code-cell">${centro.codigo}</td>
+                                <td>${centro.nombre}</td>
+                                <td>${regional.nombre}</td>
+                                <td>${distrito.nombre}</td>
+                                <td class="docentes-cell docentes-inicial">${centro.docentes_inicial}</td>
+                                <td class="docentes-cell docentes-primario">${centro.docentes_primario}</td>
+                                <td class="docentes-cell docentes-secundario">${centro.docentes_secundario}</td>
+                            `;
+                            tbody.appendChild(row);
+                            filas++;
+                        });
+                    });
+                });
+
+                if (filas === 0) {
+                    tbody.innerHTML = '<tr><td colspan="7" style="text-align: center; padding: 40px; color: #999;">No hay centros educativos que coincidan con los filtros.</td></tr>';
+                }
+            },
+
+            // Filtrar tabla por búsqueda
+            filtrarTabla: function() {
+                const search = document.getElementById('searchCentros').value.toLowerCase();
+                const rows = document.querySelectorAll('#tableCentrosBody tr');
+
+                rows.forEach(row => {
+                    const text = row.textContent.toLowerCase();
+                    row.style.display = text.includes(search) ? '' : 'none';
+                });
+            },
+
+            // Alimentar gráficos
+            alimentarGraficos: function() {
+                this.crearGraficoNiveles();
+                this.crearGraficoRegionales();
+            },
+
+            // Crear gráfico de distribución por niveles
+            crearGraficoNiveles: function() {
+                const datos = this.obtenerDatosFiltrados();
+                const stats = datos.estadisticas;
+                const ctx = document.getElementById('chartNiveles').getContext('2d');
+
+                if (window.chartNiveles && typeof window.chartNiveles.destroy === 'function') {
+                    try {
+                        window.chartNiveles.destroy();
+                    } catch(e) {
+                        console.warn('Error destroying chart:', e);
+                        window.chartNiveles = null;
+                    }
+                }
+
+                window.chartNiveles = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Nivel Inicial', 'Nivel Primario', 'Nivel Secundario'],
+                        datasets: [{
+                            data: [
+                                stats.total_docentes_inicial,
+                                stats.total_docentes_primario,
+                                stats.total_docentes_secundario
+                            ],
+                            backgroundColor: ['#10b981', '#f59e0b', '#ef4444'],
+                            borderColor: ['#059669', '#d97706', '#dc2626'],
+                            borderWidth: 2,
+                            hoverOffset: 10
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                                labels: {
+                                    usePointStyle: true,
+                                    padding: 20,
+                                    font: { size: 12, weight: 'bold' }
+                                }
+                            }
+                        }
+                    }
+                });
+            },
+
+            // Crear gráfico de docentes por regional
+            crearGraficoRegionales: function() {
+                const datos = this.obtenerDatosFiltrados();
+                
+                // Calcular docentes por regional
+                const docentesPorRegional = datos.regionales.map(regional => {
+                    const total = regional.distritos.reduce((sum, d) => 
+                        sum + d.total_docentes_inicial + d.total_docentes_primario + d.total_docentes_secundario, 0);
+                    return {
+                        nombre: regional.nombre.replace(' - ', '\n'),
+                        total: total
+                    };
+                });
+
+                // Ordenar y tomar top 10
+                docentesPorRegional.sort((a, b) => b.total - a.total);
+                const top10 = docentesPorRegional.slice(0, 10);
+
+                const ctx = document.getElementById('chartRegionales').getContext('2d');
+
+                if (window.chartRegionales && typeof window.chartRegionales.destroy === 'function') {
+                    try {
+                        window.chartRegionales.destroy();
+                    } catch(e) {
+                        console.warn('Error destroying chart:', e);
+                        window.chartRegionales = null;
+                    }
+                }
+
+                window.chartRegionales = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: top10.map(r => r.nombre),
+                        datasets: [{
+                            label: 'Docentes',
+                            data: top10.map(r => r.total),
+                            backgroundColor: [
+                                '#667eea', '#764ba2', '#f093fb', '#4facfe',
+                                '#00f2fe', '#43e97b', '#fa709a', '#fee140',
+                                '#30cfd0', '#330867'
+                            ],
+                            borderRadius: 6,
+                            borderSkipped: false
+                        }]
+                    },
+                    options: {
+                        indexAxis: 'y',
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: { display: false }
+                        },
+                        scales: {
+                            x: {
+                                beginAtZero: true,
+                                grid: { color: 'rgba(0,0,0,0.05)' }
+                            }
+                        }
+                    }
+                });
+            },
+
+            // Mostrar modal con detalle de distrito
+            mostrarModalDistritos: function(regionalCodigo) {
+                const regional = this.datos.regionales.find(r => r.codigo === regionalCodigo);
+                if (!regional) return;
+
+                const modal = document.getElementById('modalDetalle');
+                const title = document.getElementById('modalTitle');
+                const body = document.getElementById('modalBody');
+
+                title.textContent = `Distritos - ${regional.nombre}`;
+                
+                let html = '';
+                regional.distritos.forEach(distrito => {
+                    html += `
+                        <div class="distrito-detalle">
+                            <h3>${distrito.nombre}</h3>
+                            <div class="distrito-stats">
+                                <div class="distrito-stat">
+                                    <div class="distrito-stat-label">Docentes Inicial</div>
+                                    <div class="distrito-stat-value" style="color: #10b981;">${distrito.total_docentes_inicial}</div>
+                                </div>
+                                <div class="distrito-stat">
+                                    <div class="distrito-stat-label">Docentes Primario</div>
+                                    <div class="distrito-stat-value" style="color: #f59e0b;">${distrito.total_docentes_primario}</div>
+                                </div>
+                                <div class="distrito-stat">
+                                    <div class="distrito-stat-label">Docentes Secundario</div>
+                                    <div class="distrito-stat-value" style="color: #ef4444;">${distrito.total_docentes_secundario}</div>
+                                </div>
+                                <div class="distrito-stat">
+                                    <div class="distrito-stat-label">Centros</div>
+                                    <div class="distrito-stat-value" style="color: #667eea;">${distrito.centros.length}</div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                });
+
+                body.innerHTML = html;
+                modal.style.display = 'block';
+            },
+
+            // Cerrar modal
+            cerrarModal: function() {
+                document.getElementById('modalDetalle').style.display = 'none';
+            }
+        };
+
+        // Inicializar al cargar la página
+        document.addEventListener('DOMContentLoaded', () => App.init());
+
+        // Cerrar modal al hacer clic fuera
+        window.onclick = function(event) {
+            const modal = document.getElementById('modalDetalle');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        };
+    </script>
+</body>
+</html>

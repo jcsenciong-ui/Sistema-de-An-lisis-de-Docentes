@@ -1,0 +1,2445 @@
+{
+  "regionales": [
+    {
+      "nombre": "01 - BARAHONA",
+      "codigo": "01",
+      "distritos": [
+        {
+          "nombre": "0101 - PEDERNALES",
+          "codigo": "0101",
+          "inicial": {
+            "faltante": -11,
+            "excedente": 0,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": 39,
+            "excedente": 4,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -26,
+            "excedente": 18,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0102 - ENRIQUILLO",
+          "codigo": "0102",
+          "inicial": {
+            "faltante": -15,
+            "excedente": 4,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -25,
+            "excedente": 42,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -7,
+            "excedente": 33,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0103 - BARAHONA",
+          "codigo": "0103",
+          "inicial": {
+            "faltante": -28,
+            "excedente": 48,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -15,
+            "excedente": 297,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -26,
+            "excedente": 210,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0104 - CABRAL",
+          "codigo": "0104",
+          "inicial": {
+            "faltante": -7,
+            "excedente": 2,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -2,
+            "excedente": 79,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -4,
+            "excedente": 13,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0105 - VICENTE NOBLE",
+          "codigo": "0105",
+          "inicial": {
+            "faltante": -8,
+            "excedente": 9,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -8,
+            "excedente": 63,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -13,
+            "excedente": 41,
+            "completo": 0
+          }
+        }
+      ]
+    },
+    {
+      "nombre": "02 - SAN JUAN DE LA MAGUANA",
+      "codigo": "02",
+      "distritos": [
+        {
+          "nombre": "0201 - COMENDADOR",
+          "codigo": "0201",
+          "inicial": {
+            "faltante": -20,
+            "excedente": 2,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -25,
+            "excedente": 31,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -13,
+            "excedente": 28,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0202 - PEDRO SANTANA",
+          "codigo": "0202",
+          "inicial": {
+            "faltante": -2,
+            "excedente": 0,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -2,
+            "excedente": 68,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -4,
+            "excedente": 21,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0203 - LAS MATAS DE FARFAN",
+          "codigo": "0203",
+          "inicial": {
+            "faltante": -17,
+            "excedente": 7,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -7,
+            "excedente": 133,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -3,
+            "excedente": 66,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0204 - EL CERCADO",
+          "codigo": "0204",
+          "inicial": {
+            "faltante": -1,
+            "excedente": 21,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": 0,
+            "excedente": 115,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": 0,
+            "excedente": 62,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0205 - SAN JUAN ESTE",
+          "codigo": "0205",
+          "inicial": {
+            "faltante": -20,
+            "excedente": 81,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -1,
+            "excedente": 373,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -4,
+            "excedente": 257,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0206 - SAN JUAN OESTE",
+          "codigo": "0206",
+          "inicial": {
+            "faltante": -14,
+            "excedente": 29,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": 0,
+            "excedente": 396,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -4,
+            "excedente": 189,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0207 - HONDO VALLE",
+          "codigo": "0207",
+          "inicial": {
+            "faltante": -12,
+            "excedente": 0,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": 0,
+            "excedente": 53,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -10,
+            "excedente": 19,
+            "completo": 0
+          }
+        }
+      ]
+    },
+    {
+      "nombre": "03 - AZUA",
+      "codigo": "03",
+      "distritos": [
+        {
+          "nombre": "0301 - AZUA",
+          "codigo": "0301",
+          "inicial": {
+            "faltante": -29,
+            "excedente": 41,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -37,
+            "excedente": 222,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -55,
+            "excedente": 169,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0302 - PADRE DE LAS CASAS",
+          "codigo": "0302",
+          "inicial": {
+            "faltante": -11,
+            "excedente": 22,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -5,
+            "excedente": 142,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -3,
+            "excedente": 106,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0303 - SAN JOSE DE OCOA",
+          "codigo": "0303",
+          "inicial": {
+            "faltante": -2,
+            "excedente": 32,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -4,
+            "excedente": 126,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -21,
+            "excedente": 90,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0304 - BANI",
+          "codigo": "0304",
+          "inicial": {
+            "faltante": -24,
+            "excedente": 6,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -50,
+            "excedente": 88,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -89,
+            "excedente": 49,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0305 - NIZAO",
+          "codigo": "0305",
+          "inicial": {
+            "faltante": -15,
+            "excedente": 2,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -1,
+            "excedente": 36,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -25,
+            "excedente": 9,
+            "completo": 0
+          }
+        }
+      ]
+    },
+    {
+      "nombre": "04 - SAN CRISTOBAL",
+      "codigo": "04",
+      "distritos": [
+        {
+          "nombre": "0401 - CAMBITA GARABITOS",
+          "codigo": "0401",
+          "inicial": {
+            "faltante": -6,
+            "excedente": 33,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": 0,
+            "excedente": 167,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -10,
+            "excedente": 65,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0402 - SAN CRISTOBAL NORTE",
+          "codigo": "0402",
+          "inicial": {
+            "faltante": -19,
+            "excedente": 36,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -29,
+            "excedente": 95,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -22,
+            "excedente": 47,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0403 - SAN CRISTOBAL SUR",
+          "codigo": "0403",
+          "inicial": {
+            "faltante": -11,
+            "excedente": 15,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -43,
+            "excedente": 96,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -55,
+            "excedente": 33,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0404 - VILLA  ALTAGRACIA",
+          "codigo": "0404",
+          "inicial": {
+            "faltante": -23,
+            "excedente": 14,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -11,
+            "excedente": 109,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -2,
+            "excedente": 109,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0405 - YAGUATE",
+          "codigo": "0405",
+          "inicial": {
+            "faltante": -6,
+            "excedente": 19,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -1,
+            "excedente": 123,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -13,
+            "excedente": 75,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0406 - HAINA",
+          "codigo": "0406",
+          "inicial": {
+            "faltante": -30,
+            "excedente": 4,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -24,
+            "excedente": 99,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -82,
+            "excedente": 122,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0407 - SAN GREGORIO DE NIGUA",
+          "codigo": "0407",
+          "inicial": {
+            "faltante": -16,
+            "excedente": 16,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -1,
+            "excedente": 80,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -52,
+            "excedente": 29,
+            "completo": 0
+          }
+        }
+      ]
+    },
+    {
+      "nombre": "05 - SAN PEDRO DE MACORIS",
+      "codigo": "05",
+      "distritos": [
+        {
+          "nombre": "0501 - SAN PEDRO DE MACORIS ESTE",
+          "codigo": "0501",
+          "inicial": {
+            "faltante": -31,
+            "excedente": 22,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -9,
+            "excedente": 156,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -2,
+            "excedente": 117,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0502 - SAN PEDRO DE MACORIS OESTE",
+          "codigo": "0502",
+          "inicial": {
+            "faltante": -16,
+            "excedente": 9,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -11,
+            "excedente": 97,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -28,
+            "excedente": 52,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0503 - LA ROMANA",
+          "codigo": "0503",
+          "inicial": {
+            "faltante": -56,
+            "excedente": 20,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -36,
+            "excedente": 88,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -88,
+            "excedente": 68,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0504 - HATO MAYOR",
+          "codigo": "0504",
+          "inicial": {
+            "faltante": -34,
+            "excedente": 12,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -31,
+            "excedente": 269,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -18,
+            "excedente": 85,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0505 - SABANA DE LA MAR",
+          "codigo": "0505",
+          "inicial": {
+            "faltante": -8,
+            "excedente": 5,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -6,
+            "excedente": 20,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -11,
+            "excedente": 2,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0506 - CONSUELO",
+          "codigo": "0506",
+          "inicial": {
+            "faltante": -8,
+            "excedente": 7,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": 0,
+            "excedente": 83,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -6,
+            "excedente": 60,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0507 - SAN JOSE DE LOS LLANOS",
+          "codigo": "0507",
+          "inicial": {
+            "faltante": -10,
+            "excedente": 6,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -12,
+            "excedente": 52,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -8,
+            "excedente": 11,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0508 - QUISQUEYA",
+          "codigo": "0508",
+          "inicial": {
+            "faltante": -10,
+            "excedente": 0,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -10,
+            "excedente": 62,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -9,
+            "excedente": 15,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0509 - EL VALLE",
+          "codigo": "0509",
+          "inicial": {
+            "faltante": -1,
+            "excedente": 3,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -1,
+            "excedente": 61,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -7,
+            "excedente": 12,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0510 - GUAYMATE",
+          "codigo": "0510",
+          "inicial": {
+            "faltante": -7,
+            "excedente": 3,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -1,
+            "excedente": 33,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -9,
+            "excedente": 2,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0511 - VILLA HERMOSA",
+          "codigo": "0511",
+          "inicial": {
+            "faltante": -28,
+            "excedente": 6,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -50,
+            "excedente": 16,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -27,
+            "excedente": 39,
+            "completo": 0
+          }
+        }
+      ]
+    },
+    {
+      "nombre": "06 - LA VEGA",
+      "codigo": "06",
+      "distritos": [
+        {
+          "nombre": "0601 - JOSE CONTRERAS",
+          "codigo": "0601",
+          "inicial": {
+            "faltante": -1,
+            "excedente": 2,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": 0,
+            "excedente": 36,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -4,
+            "excedente": 22,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0602 - CONSTANZA",
+          "codigo": "0602",
+          "inicial": {
+            "faltante": -16,
+            "excedente": 15,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -11,
+            "excedente": 57,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -32,
+            "excedente": 33,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0603 - JARABACOA",
+          "codigo": "0603",
+          "inicial": {
+            "faltante": -13,
+            "excedente": 9,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -10,
+            "excedente": 64,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -11,
+            "excedente": 63,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0604 - LA VEGA OESTE",
+          "codigo": "0604",
+          "inicial": {
+            "faltante": -20,
+            "excedente": 25,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -18,
+            "excedente": 170,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -13,
+            "excedente": 109,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0605 - LA VEGA ESTE",
+          "codigo": "0605",
+          "inicial": {
+            "faltante": -15,
+            "excedente": 24,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -13,
+            "excedente": 204,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -17,
+            "excedente": 154,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0606 - MOCA",
+          "codigo": "0606",
+          "inicial": {
+            "faltante": -14,
+            "excedente": 33,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -24,
+            "excedente": 195,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -26,
+            "excedente": 141,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0607 - GASPAR HERNANDEZ",
+          "codigo": "0607",
+          "inicial": {
+            "faltante": -14,
+            "excedente": 5,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -1,
+            "excedente": 124,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -4,
+            "excedente": 63,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0608 - JAMAO AL NORTE",
+          "codigo": "0608",
+          "inicial": {
+            "faltante": -4,
+            "excedente": 1,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": 0,
+            "excedente": 33,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": 0,
+            "excedente": 10,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0609 - SAN VICTOR",
+          "codigo": "0609",
+          "inicial": {
+            "faltante": 0,
+            "excedente": 9,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": 0,
+            "excedente": 51,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": 0,
+            "excedente": 21,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0610 - JIMA ABAJO",
+          "codigo": "0610",
+          "inicial": {
+            "faltante": -2,
+            "excedente": 6,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": 0,
+            "excedente": 48,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": 0,
+            "excedente": 41,
+            "completo": 0
+          }
+        }
+      ]
+    },
+    {
+      "nombre": "07 - SAN FRANCISCO DE MACORIS",
+      "codigo": "07",
+      "distritos": [
+        {
+          "nombre": "0701 - TENARES",
+          "codigo": "0701",
+          "inicial": {
+            "faltante": -2,
+            "excedente": 14,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": 0,
+            "excedente": 198,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -5,
+            "excedente": 56,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0702 - SALCEDO",
+          "codigo": "0702",
+          "inicial": {
+            "faltante": -4,
+            "excedente": 38,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -13,
+            "excedente": 181,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": 0,
+            "excedente": 82,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0703 - CASTILLO",
+          "codigo": "0703",
+          "inicial": {
+            "faltante": -2,
+            "excedente": 22,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": 0,
+            "excedente": 273,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -3,
+            "excedente": 120,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0704 - VILLA RIVA",
+          "codigo": "0704",
+          "inicial": {
+            "faltante": -14,
+            "excedente": 7,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -7,
+            "excedente": 62,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -1,
+            "excedente": 45,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0705 - SAN FRANCISCO DE MACORIS SUR-E",
+          "codigo": "0705",
+          "inicial": {
+            "faltante": -23,
+            "excedente": 48,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -7,
+            "excedente": 273,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -16,
+            "excedente": 213,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0706 - SAN FRANCISCO DE MACORIS NOR-O",
+          "codigo": "0706",
+          "inicial": {
+            "faltante": -12,
+            "excedente": 29,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": 0,
+            "excedente": 352,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -6,
+            "excedente": 159,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0707 - VILLA TAPIA",
+          "codigo": "0707",
+          "inicial": {
+            "faltante": -1,
+            "excedente": 9,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": 0,
+            "excedente": 189,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": 0,
+            "excedente": 88,
+            "completo": 0
+          }
+        }
+      ]
+    },
+    {
+      "nombre": "08 - SANTIAGO",
+      "codigo": "08",
+      "distritos": [
+        {
+          "nombre": "0801 - SAN JOSE DE LAS MATAS",
+          "codigo": "0801",
+          "inicial": {
+            "faltante": -5,
+            "excedente": 9,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -2,
+            "excedente": 52,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -11,
+            "excedente": 57,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0802 - JANICO",
+          "codigo": "0802",
+          "inicial": {
+            "faltante": -3,
+            "excedente": 12,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -1,
+            "excedente": 57,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -5,
+            "excedente": 36,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0803 - SANTIAGO SUR-ESTE",
+          "codigo": "0803",
+          "inicial": {
+            "faltante": -10,
+            "excedente": 25,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -21,
+            "excedente": 98,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -28,
+            "excedente": 145,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0804 - SANTIAGO NOROESTE",
+          "codigo": "0804",
+          "inicial": {
+            "faltante": -9,
+            "excedente": 39,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -56,
+            "excedente": 92,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -47,
+            "excedente": 223,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0805 - SANTIAGO CENTRO-OESTE",
+          "codigo": "0805",
+          "inicial": {
+            "faltante": -9,
+            "excedente": 32,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -53,
+            "excedente": 89,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -11,
+            "excedente": 206,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0806 - SANTIAGO NORESTE",
+          "codigo": "0806",
+          "inicial": {
+            "faltante": -4,
+            "excedente": 23,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -19,
+            "excedente": 53,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -2,
+            "excedente": 79,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0807 - VILLA BISONO (NAVARRETE)",
+          "codigo": "0807",
+          "inicial": {
+            "faltante": -6,
+            "excedente": 3,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -9,
+            "excedente": 43,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -13,
+            "excedente": 41,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0808 - LICEY AL MEDIO",
+          "codigo": "0808",
+          "inicial": {
+            "faltante": 0,
+            "excedente": 26,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -3,
+            "excedente": 74,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -2,
+            "excedente": 55,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0809 - TAMBORIL",
+          "codigo": "0809",
+          "inicial": {
+            "faltante": -8,
+            "excedente": 9,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -3,
+            "excedente": 72,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -3,
+            "excedente": 39,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0810 - VILLA GONZALEZ",
+          "codigo": "0810",
+          "inicial": {
+            "faltante": -15,
+            "excedente": 4,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -6,
+            "excedente": 30,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -1,
+            "excedente": 31,
+            "completo": 0
+          }
+        }
+      ]
+    },
+    {
+      "nombre": "09 - MAO",
+      "codigo": "09",
+      "distritos": [
+        {
+          "nombre": "0901 - MAO",
+          "codigo": "0901",
+          "inicial": {
+            "faltante": -5,
+            "excedente": 43,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -17,
+            "excedente": 123,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -17,
+            "excedente": 65,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0902 - ESPERANZA",
+          "codigo": "0902",
+          "inicial": {
+            "faltante": -11,
+            "excedente": 11,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -21,
+            "excedente": 38,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -9,
+            "excedente": 41,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0903 - SAN IGNACIO DE SABANETA",
+          "codigo": "0903",
+          "inicial": {
+            "faltante": -1,
+            "excedente": 25,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -4,
+            "excedente": 118,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -11,
+            "excedente": 44,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0904 - MONCION",
+          "codigo": "0904",
+          "inicial": {
+            "faltante": 0,
+            "excedente": 11,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": 0,
+            "excedente": 31,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -1,
+            "excedente": 22,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0905 - LAGUNA SALADA",
+          "codigo": "0905",
+          "inicial": {
+            "faltante": -1,
+            "excedente": 10,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -7,
+            "excedente": 18,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": 0,
+            "excedente": 19,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "0906 - VILLA LOS ALMACIGOS",
+          "codigo": "0906",
+          "inicial": {
+            "faltante": -1,
+            "excedente": 12,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": 0,
+            "excedente": 65,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -1,
+            "excedente": 26,
+            "completo": 0
+          }
+        }
+      ]
+    },
+    {
+      "nombre": "10 - SANTO DOMINGO II",
+      "codigo": "10",
+      "distritos": [
+        {
+          "nombre": "1001 - VILLA MELLA",
+          "codigo": "1001",
+          "inicial": {
+            "faltante": -22,
+            "excedente": 58,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -242,
+            "excedente": 58,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -79,
+            "excedente": 147,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "1002 - SABANA PERDIDA",
+          "codigo": "1002",
+          "inicial": {
+            "faltante": -14,
+            "excedente": 72,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -144,
+            "excedente": 75,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -43,
+            "excedente": 148,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "1003 - SANTO DOMINGO NORESTE",
+          "codigo": "1003",
+          "inicial": {
+            "faltante": -24,
+            "excedente": 32,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -187,
+            "excedente": 21,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -122,
+            "excedente": 221,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "1004 - SANTO DOMINGO ORIENTAL",
+          "codigo": "1004",
+          "inicial": {
+            "faltante": -5,
+            "excedente": 33,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -50,
+            "excedente": 77,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -51,
+            "excedente": 171,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "1005 - BOCA CHICA",
+          "codigo": "1005",
+          "inicial": {
+            "faltante": -19,
+            "excedente": 23,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -140,
+            "excedente": 34,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -72,
+            "excedente": 33,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "1006 - MENDOZA",
+          "codigo": "1006",
+          "inicial": {
+            "faltante": -15,
+            "excedente": 52,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -262,
+            "excedente": 85,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -83,
+            "excedente": 638,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "1007 - SAN ANTONIO DE GUERRA",
+          "codigo": "1007",
+          "inicial": {
+            "faltante": -9,
+            "excedente": 23,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -53,
+            "excedente": 44,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -27,
+            "excedente": 9,
+            "completo": 0
+          }
+        }
+      ]
+    },
+    {
+      "nombre": "11 - PUERTO PLATA",
+      "codigo": "11",
+      "distritos": [
+        {
+          "nombre": "1101 - SOSUA",
+          "codigo": "1101",
+          "inicial": {
+            "faltante": -14,
+            "excedente": 23,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -31,
+            "excedente": 76,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -78,
+            "excedente": 64,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "1102 - PUERTO PLATA",
+          "codigo": "1102",
+          "inicial": {
+            "faltante": -11,
+            "excedente": 28,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -33,
+            "excedente": 70,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -36,
+            "excedente": 79,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "1103 - IMBERT",
+          "codigo": "1103",
+          "inicial": {
+            "faltante": -1,
+            "excedente": 14,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": 0,
+            "excedente": 92,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -8,
+            "excedente": 52,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "1104 - LUPERON",
+          "codigo": "1104",
+          "inicial": {
+            "faltante": -4,
+            "excedente": 6,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": 0,
+            "excedente": 68,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -1,
+            "excedente": -29,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "1105 - ALTAMIRA",
+          "codigo": "1105",
+          "inicial": {
+            "faltante": -2,
+            "excedente": 7,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -2,
+            "excedente": 68,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -6,
+            "excedente": 23,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "1106 - EL MAMEY",
+          "codigo": "1106",
+          "inicial": {
+            "faltante": -7,
+            "excedente": 7,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -1,
+            "excedente": 75,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -7,
+            "excedente": 16,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "1107 - VILLA ISABELA",
+          "codigo": "1107",
+          "inicial": {
+            "faltante": -9,
+            "excedente": 8,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -6,
+            "excedente": 23,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -1,
+            "excedente": 16,
+            "completo": 0
+          }
+        }
+      ]
+    },
+    {
+      "nombre": "12 - HIGUEY",
+      "codigo": "12",
+      "distritos": [
+        {
+          "nombre": "1201 - HIGUEY",
+          "codigo": "1201",
+          "inicial": {
+            "faltante": -53,
+            "excedente": 29,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -339,
+            "excedente": 84,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -187,
+            "excedente": 119,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "1202 - SAN RAFAEL DEL YUMA",
+          "codigo": "1202",
+          "inicial": {
+            "faltante": -10,
+            "excedente": 4,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -22,
+            "excedente": 25,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -10,
+            "excedente": 16,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "1203 - EL SEIBO",
+          "codigo": "1203",
+          "inicial": {
+            "faltante": -15,
+            "excedente": 22,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -28,
+            "excedente": 165,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -13,
+            "excedente": 50,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "1204 - MICHES",
+          "codigo": "1204",
+          "inicial": {
+            "faltante": -16,
+            "excedente": 6,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -6,
+            "excedente": 38,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -8,
+            "excedente": 12,
+            "completo": 0
+          }
+        }
+      ]
+    },
+    {
+      "nombre": "13 - MONTE CRISTI",
+      "codigo": "13",
+      "distritos": [
+        {
+          "nombre": "1301 - MONTE CRISTI",
+          "codigo": "1301",
+          "inicial": {
+            "faltante": -6,
+            "excedente": 11,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -15,
+            "excedente": 28,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -5,
+            "excedente": 41,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "1302 - GUAYUBIN",
+          "codigo": "1302",
+          "inicial": {
+            "faltante": -8,
+            "excedente": 11,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -17,
+            "excedente": 62,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -6,
+            "excedente": 32,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "1303 - VILLA VASQUEZ",
+          "codigo": "1303",
+          "inicial": {
+            "faltante": -5,
+            "excedente": 8,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -1,
+            "excedente": 35,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -8,
+            "excedente": 19,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "1304 - DAJABON",
+          "codigo": "1304",
+          "inicial": {
+            "faltante": -14,
+            "excedente": 4,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -26,
+            "excedente": 42,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -9,
+            "excedente": 34,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "1305 - LOMA DE CABRERA",
+          "codigo": "1305",
+          "inicial": {
+            "faltante": -9,
+            "excedente": 12,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -1,
+            "excedente": 54,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": 0,
+            "excedente": 31,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "1306 - RESTAURACION",
+          "codigo": "1306",
+          "inicial": {
+            "faltante": -2,
+            "excedente": 12,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -8,
+            "excedente": 26,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -2,
+            "excedente": 18,
+            "completo": 0
+          }
+        }
+      ]
+    },
+    {
+      "nombre": "14 - NAGUA",
+      "codigo": "14",
+      "distritos": [
+        {
+          "nombre": "1401 - NAGUA",
+          "codigo": "1401",
+          "inicial": {
+            "faltante": -8,
+            "excedente": 57,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -1,
+            "excedente": 163,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -2,
+            "excedente": 108,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "1402 - CABRERA",
+          "codigo": "1402",
+          "inicial": {
+            "faltante": -2,
+            "excedente": 20,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": 0,
+            "excedente": 91,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -3,
+            "excedente": 23,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "1403 - RIO SAN JUAN",
+          "codigo": "1403",
+          "inicial": {
+            "faltante": -4,
+            "excedente": 3,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": 0,
+            "excedente": 49,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": 0,
+            "excedente": 19,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "1404 - SAMANA",
+          "codigo": "1404",
+          "inicial": {
+            "faltante": -22,
+            "excedente": 12,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -13,
+            "excedente": 66,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -6,
+            "excedente": 63,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "1405 - SANCHEZ",
+          "codigo": "1405",
+          "inicial": {
+            "faltante": -3,
+            "excedente": 14,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": 0,
+            "excedente": 68,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": 0,
+            "excedente": 21,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "1406 - EL FACTOR",
+          "codigo": "1406",
+          "inicial": {
+            "faltante": -2,
+            "excedente": 15,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -7,
+            "excedente": 41,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": 0,
+            "excedente": 40,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "1407 - LAS TERRENAS",
+          "codigo": "1407",
+          "inicial": {
+            "faltante": -7,
+            "excedente": 1,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -21,
+            "excedente": 4,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -3,
+            "excedente": 14,
+            "completo": 0
+          }
+        }
+      ]
+    },
+    {
+      "nombre": "15 - SANTO DOMINGO III",
+      "codigo": "15",
+      "distritos": [
+        {
+          "nombre": "1501 - LOS ALCARRIZOS",
+          "codigo": "1501",
+          "inicial": {
+            "faltante": -28,
+            "excedente": 24,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -205,
+            "excedente": 104,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -173,
+            "excedente": 102,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "1502 - SANTO DOMINGO CENTRO",
+          "codigo": "1502",
+          "inicial": {
+            "faltante": -42,
+            "excedente": 10,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -144,
+            "excedente": 142,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -179,
+            "excedente": 210,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "1503 - SANTO DOMINGO SURCENTRAL",
+          "codigo": "1503",
+          "inicial": {
+            "faltante": -10,
+            "excedente": 10,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -44,
+            "excedente": 125,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -87,
+            "excedente": 191,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "1504 - SANTO DOMINGO NOROESTE",
+          "codigo": "1504",
+          "inicial": {
+            "faltante": -34,
+            "excedente": 32,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -81,
+            "excedente": 76,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -82,
+            "excedente": 195,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "1505 - HERRERA",
+          "codigo": "1505",
+          "inicial": {
+            "faltante": -34,
+            "excedente": 45,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -240,
+            "excedente": 77,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -158,
+            "excedente": 98,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "1506 - PEDRO BRAND",
+          "codigo": "1506",
+          "inicial": {
+            "faltante": -10,
+            "excedente": 9,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -64,
+            "excedente": 23,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -46,
+            "excedente": 47,
+            "completo": 0
+          }
+        }
+      ]
+    },
+    {
+      "nombre": "16 - COTUI",
+      "codigo": "16",
+      "distritos": [
+        {
+          "nombre": "1601 - COTUI",
+          "codigo": "1601",
+          "inicial": {
+            "faltante": -2,
+            "excedente": 53,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": 0,
+            "excedente": 292,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -4,
+            "excedente": 181,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "1602 - FANTINO",
+          "codigo": "1602",
+          "inicial": {
+            "faltante": -1,
+            "excedente": 12,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": 0,
+            "excedente": 147,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": 0,
+            "excedente": 106,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "1603 - CEVICOS",
+          "codigo": "1603",
+          "inicial": {
+            "faltante": -2,
+            "excedente": 5,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": 0,
+            "excedente": 77,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": 0,
+            "excedente": 36,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "1604 - BONAO SUROESTE",
+          "codigo": "1604",
+          "inicial": {
+            "faltante": -5,
+            "excedente": 50,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -6,
+            "excedente": 97,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -21,
+            "excedente": 98,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "1605 - PIEDRA BLANCA",
+          "codigo": "1605",
+          "inicial": {
+            "faltante": -5,
+            "excedente": 16,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -12,
+            "excedente": 77,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -17,
+            "excedente": 73,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "1606 - BONAO NORDESTE",
+          "codigo": "1606",
+          "inicial": {
+            "faltante": -7,
+            "excedente": 20,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -5,
+            "excedente": 81,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -3,
+            "excedente": 45,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "1607 - VILLA LA MATA",
+          "codigo": "1607",
+          "inicial": {
+            "faltante": 0,
+            "excedente": 13,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": 0,
+            "excedente": 138,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": 0,
+            "excedente": 72,
+            "completo": 0
+          }
+        }
+      ]
+    },
+    {
+      "nombre": "17 - MONTE PLATA",
+      "codigo": "17",
+      "distritos": [
+        {
+          "nombre": "1701 - YAMASA",
+          "codigo": "1701",
+          "inicial": {
+            "faltante": -8,
+            "excedente": 17,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -8,
+            "excedente": 208,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -12,
+            "excedente": 58,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "1702 - MONTE PLATA",
+          "codigo": "1702",
+          "inicial": {
+            "faltante": -6,
+            "excedente": 17,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": 0,
+            "excedente": 209,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -3,
+            "excedente": 144,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "1703 - BAYAGUANA",
+          "codigo": "1703",
+          "inicial": {
+            "faltante": -8,
+            "excedente": 11,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": 12,
+            "excedente": 72,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -10,
+            "excedente": 39,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "1704 - SABANA GRANDE DE BOYA",
+          "codigo": "1704",
+          "inicial": {
+            "faltante": -11,
+            "excedente": 11,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -3,
+            "excedente": 71,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -2,
+            "excedente": 51,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "1705 - PERALVILLO",
+          "codigo": "1705",
+          "inicial": {
+            "faltante": -3,
+            "excedente": 16,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -5,
+            "excedente": 154,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -1,
+            "excedente": 42,
+            "completo": 0
+          }
+        }
+      ]
+    },
+    {
+      "nombre": "18 - BAHORUCO",
+      "codigo": "18",
+      "distritos": [
+        {
+          "nombre": "1801 - NEIBA",
+          "codigo": "1801",
+          "inicial": {
+            "faltante": -1,
+            "excedente": 55,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -6,
+            "excedente": 340,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -14,
+            "excedente": 73,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "1802 - TAMAYO",
+          "codigo": "1802",
+          "inicial": {
+            "faltante": -10,
+            "excedente": 9,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -2,
+            "excedente": 112,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -2,
+            "excedente": 35,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "1803 - VILLA JARAGUA",
+          "codigo": "1803",
+          "inicial": {
+            "faltante": -5,
+            "excedente": 7,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -4,
+            "excedente": 78,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": 0,
+            "excedente": 78,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "1804 - JIMANI",
+          "codigo": "1804",
+          "inicial": {
+            "faltante": -10,
+            "excedente": 8,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -14,
+            "excedente": 31,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -1,
+            "excedente": 43,
+            "completo": 0
+          }
+        },
+        {
+          "nombre": "1805 - DUVERGE",
+          "codigo": "1805",
+          "inicial": {
+            "faltante": -8,
+            "excedente": 7,
+            "completo": 0
+          },
+          "primario": {
+            "faltante": -2,
+            "excedente": 155,
+            "completo": 0
+          },
+          "secundario": {
+            "faltante": -5,
+            "excedente": 33,
+            "completo": 0
+          }
+        }
+      ]
+    }
+  ],
+  "estadisticas": {
+    "total_regionales": 18,
+    "inicial": {
+      "faltante": -1393,
+      "excedente": 2210
+    },
+    "primario": {
+      "faltante": -3234,
+      "excedente": 12330
+    },
+    "secundario": {
+      "faltante": -2752,
+      "excedente": 9170
+    }
+  }
+}
